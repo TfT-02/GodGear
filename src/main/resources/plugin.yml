@@ -1,0 +1,25 @@
+name: GodGear
+version: ${project.version}
+description: Craft new items infused with the power of Gods!
+
+author: TfT_02
+main: com.me.tft_02.godgear.GodGear
+
+permissions:
+    godgear.items.all:
+        description: Gives access to all permissions
+        default: op
+        children:
+            godgear.items.hermesboots.all: true
+    godgear.items.hermesboots.all:
+        description: Allow to craft and use Hermes Boots
+        default: true
+        children:
+            godgear.items.hermesboots.craft: true
+            godgear.items.hermesboots.use: true
+    godgear.items.hermesboots.craft:
+        description: Allow to craft Hermes Boots
+        default: false
+    godgear.items.hermesboots.use:
+        description: Allow to use Hermes Boots
+        default: true
